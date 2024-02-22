@@ -23,6 +23,8 @@ python 2048_game.py -p "random"
 
 Included functions to check if there are any valid moves left and  to terminate the game, otherwise the random player continues to play, excessive computational power, this function is currently not working
 
+In the debugging file, we can see that in the final matrix, there is a valid move (the two 16s adjacent to each other) need to implement logic for the random agent to choose moves when there are ajacent tiles, as the current function to check if move valid accounts for this 
+
 **Implementation** - utilise the terminal to select between the two “players” and access the different play functions 
 
 **Performance evaluation** - the two options work, currently too much computation when running random, it was getting stuck in an infinite loop. 
