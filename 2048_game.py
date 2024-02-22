@@ -59,6 +59,29 @@ def print_grid(mat):
     for row in mat:
         print(row)
 
+# Function to check if there are any valid moves left
+def check_valid_moves(mat):
+    # Check if there are any empty cells
+    for i in range(4):
+        for j in range(4):
+            if mat[i][j] == 0:
+                return True
+
+    # Check if there are any adjacent cells with the same value
+    for i in range(3):
+        for j in range(3):
+            if mat[i][j] == mat[i + 1][j] or mat[i][j] == mat[i][j + 1]:
+                return True
+
+    # Check the last row and column
+    for j in range(3):
+        if mat[3][j] == mat[3][j + 1]:
+            return True
+    for i in range(3):
+        if mat[i][3] == mat[i + 1][3]:
+            return True
+
+    return False
 
 # Main game loop for a human player
 def main_human_player():
@@ -97,24 +120,22 @@ def main_human_player():
         else:
             print("Invalid command. Use W/A/S/D to move or Q to quit.")
             continue
+
+        if not check_valid_moves(mat):
+            print("Game over! No more valid moves.")
+            break
+
         add_new(mat)
         print_grid(mat)
 
-
-# Main game loop for a random agent
 # Main game loop for a random agent
 def main_random_agent():
     mat = start_game()
     add_new(mat)
     print_grid(mat)
     while True:
-        # Check if the game is over
-        if not any(0 in row for row in mat):
-            print("Game Over")
-            break
-
-        # Randomly select a move
         command = random.choice(['w', 'a', 's', 'd'])
+        print("Random Agent's move:", command) # Print the agent's move
         if command == 'w':
             mat = transpose(mat)
             mat = compress(mat)
@@ -139,6 +160,13 @@ def main_random_agent():
             mat = merge(mat)
             mat = compress(mat)
             mat = reverse(mat)
+
+        print_grid(mat)  # Print the grid after the agent's move
+
+        if not check_valid_moves(mat):
+            print("Game over! No more valid moves.")
+            break
+
         add_new(mat)
         print_grid(mat)
 
@@ -146,10 +174,9 @@ def main_random_agent():
 if __name__ == "__main__":
 
     # Define the command line arguments
-    sys.argv = ['2048_test.py', "-p", "human"]
+    opts, args = getopt.getopt(sys.argv[1:], "hp:",["help", "player="])
+    player = None # Initialise the player variable
 
-    opts, args = getopt.getopt(sys.argv[1:], "hp:",
-                               ["help", "player="])
     for opt, arg in opts:
         if opt in ("-h", "--help"):
             print("Usage: 2048_test.py --player [human|random]")
