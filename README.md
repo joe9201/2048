@@ -21,7 +21,7 @@ the common to play as random agent is:
 
 python 2048_game.py -p "random"
 
-A "check valid moves" function was also implemented to check if there are any remaining cells available. 
+A "check valid moves" function was also implemented to check if there are any remaining cells available - required as otherwise the random agent gets stuck in an infinite loop. 
 
 **Implementation** - utilise the terminal to select between the two “players” and access the different play functions 
 
