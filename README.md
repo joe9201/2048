@@ -39,6 +39,11 @@ Something to consider (and ask supervisor) is whether the text based version is 
 
 Also to conduct further research in utilising TF Agents - https://www.tensorflow.org/agents which is a reinforcement library for tensorflow
 
+**References**
+
+Systems Import code - Markey Gyaz
+random_player_agent function and stopping criteria function - Chat GPT
+
 
 
 
