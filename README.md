@@ -25,6 +25,16 @@ The reward and total score are then combined and normalized to a value between 0
 
 Decided not to incorporate this into the existing code in case there's anything we want to change in terms of the reward calculation (likely this can be further optimised). Once we've decided this though we can then move on to implementing more strategy or building the NN.
 
+### Eloise - 25/02/2024
+Today I looked at trying to get a version of 2048 with a screen display working, which I did - I chose visual studio code as my IDE.
+
+I then used trusty ol’ GPT to help me understand the best way to attack either using this code (or the original text code from Elle and Greg) how to implement Q-learning.  
+https://chat.openai.com/share/99395bf4-7131-4999-914e-e6f37c3e46ed 
+From what I could understand, it was suggesting that due to the amount of state space for the code from lewisjdeanes is quite large, almost too large to implement using a q-learning technique however this is where it suggests deep q-learning is a better idea to go down.
+
+For the original code from Elle and Greg, Chatgpt suggests similar things but instead of deep q-learning it suggests that the state space can be simplified by reducing the state space by grouping similar values together or by focusing on certain key features of the state (e.g., highest value tile, number of empty cells).
+
+I looked into https://pythonprogramming.net/q-learning-analysis-reinforcement-learning-python-tutorial/ to understand what we can do with our data and understand how to display said data; For the end result of the project do we need to demonstrate the learning agent actually playing the game to the best of its ability or just display the data?
 ### Elly - 22/02/2024
 
 Modified the existing 2048 text based game to include a human player and a “random” player which chooses randomly selected moves to play the game 
