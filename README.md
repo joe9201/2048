@@ -35,6 +35,9 @@ From what I could understand, it was suggesting that due to the amount of state 
 For the original code from Elle and Greg, Chatgpt suggests similar things but instead of deep q-learning it suggests that the state space can be simplified by reducing the state space by grouping similar values together or by focusing on certain key features of the state (e.g., highest value tile, number of empty cells).
 
 I looked into https://pythonprogramming.net/q-learning-analysis-reinforcement-learning-python-tutorial/ to understand what we can do with our data and understand how to display said data; For the end result of the project do we need to demonstrate the learning agent actually playing the game to the best of its ability or just display the data?
+
+the 2048.py file and the constants.py work together to form the working visual version of the 2048 game
+
 ### Elly - 22/02/2024
 
 Modified the existing 2048 text based game to include a human player and a “random” player which chooses randomly selected moves to play the game 
