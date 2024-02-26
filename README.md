@@ -3,6 +3,17 @@ Systems Imp Group Project
 
 # Handover
 
+### Joe - 26/02
+
+Uploaded a reward bot file. This uses the existing code (played randomly) but the agent calculates a reward score after each turn based on:
+
+penalty for actions which do not increase the score
+reward for every increase in total score
+reward for every new highest tile found
+reward for getting to 2048
+
+Decided not to incorporate this into the existing code incase there's anything we want to change in terms of the reward calculation. Once we've decided this though we can then move onto implementing a strategy/building the NN.
+
 ### Elly - 22/02/2024
 
 Modified the existing 2048 text based game to include a human player and a “random” player which chooses randomly selected moves to play the game 
