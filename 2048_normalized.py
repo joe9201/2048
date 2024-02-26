@@ -1,4 +1,6 @@
 import random
+import getopt
+import sys
 from math import log2
 
 # Initialize the 4x4 grid
