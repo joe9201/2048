@@ -5,7 +5,7 @@ Systems Imp Group Project
 
 ### Joe - 26/02
 
-Uploaded a reward bot file. This can be used by calling either the random or human player and calculates a score at the end of each move.
+Uploaded a scores file. This can be used by calling either the random or human player. This calculates a score at the end of each move based upon.
 
 - penalty for actions which do not increase the score
 
@@ -15,7 +15,7 @@ Uploaded a reward bot file. This can be used by calling either the random or hum
 
 - reward for getting to 2048
 
-Decided not to incorporate this into the existing code in case there's anything we want to change in terms of the reward calculation. Once we've decided this though we can then move on to implementing a strategy/building the NN.
+Decided not to incorporate this into the existing code in case there's anything we want to change in terms of the reward calculation (likely this can be optimised). Once we've decided this though we can then move on to implementing a strategy/building the NN.
 
 ### Elly - 22/02/2024
 
