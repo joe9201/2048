@@ -3,6 +3,12 @@ Systems Imp Group Project
 
 # Handover
 
+### Greg - 27/07
+
+I have updated the script to print the button presses 'w','s','a','d' as 'Up', 'Down', 'Left', 'Right'.
+
+I have also added code to convert the game state into a suitable format for input into a neural network. This is done by flattening the grid and then one-hot encoding the values. This is the 'encode_state" function, which provides a 2D list where each inner list represents the one-hot encoded version of a corresponding row in the original grid, which should be easily read by a neural network. 
+
 ### Joe - 26/02
 
 Uploaded a normalized scores file. This can be used by calling either the random or human player. This calculates a normalised score (between 0 and 1) at the end of each move based upon.
