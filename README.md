@@ -3,11 +3,13 @@ Systems Imp Group Project
 
 # Handover
 
-### Greg - 27/07
+### Greg - 27/02
 
 I have updated the script to print the button presses 'w','s','a','d' as 'Up', 'Down', 'Left', 'Right'.
 
 I have also added code to convert the game state into a suitable format for input into a neural network. This is done by flattening the grid and then one-hot encoding the values. This is the 'encode_state" function, which provides a 2D list where each inner list represents the one-hot encoded version of a corresponding row in the original grid, which should be easily read by a neural network. 
+
+Would suggest that the next steps are to see whether we can get a neural network to read the code and play the game, through the OpenAI Gym?
 
 ### Joe - 26/02
 
